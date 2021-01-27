@@ -259,28 +259,37 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
+  var esVocal = '';
   if (letra.length > 1){
     return 'Dato incorrecto';
   }
-  else switch (letra){
-    case 'a':
-      return 'Es vocal';
+  else{
+    switch (letra){
+      case 'a':
+        esVocal = 'Es vocal';
+        break;
     
-    case 'e':
-      return 'Es vocal';
+      case 'e':
+        esVocal = 'Es vocal';
+        break;
 
-    case 'i':
-      return 'Es vocal';      
+      case 'i':
+        esVocal = 'Es vocal';
+        break;
 
-    case 'o':
-      return 'Es vocal';
+      case 'o':
+        esVocal = 'Es vocal';
+        break;
 
-    case 'u':
-      return 'Es vocal';
-    
-    default:
-      break;
+      case 'u':
+        esVocal = 'Es vocal';
+        break;
+
+      default:
+        break;
+    }
   }
+  return esVocal;
 }
 
 
