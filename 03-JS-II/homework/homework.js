@@ -155,7 +155,23 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  
+  var div3 = numero % 3;
+  var div5 = numero % 5;
+  var res = '';
+
+  if (div3 === 0 && div5 === 0){
+    res = 'fizzbuzz'
+  }
+  else if(div3 === 0){
+    res = 'fizz'
+  }
+  else if(div5 === 0){
+    res = 'buzz'
+  }
+  else{
+    res = numero;
+  }
+  return res;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -165,6 +181,25 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  var res1 = '';
+  var res2 = '';
+  
+  if(num1 === 0){
+    return 'Hay negativos';
+  }
+  else if(num2 === 0){
+    return 'Hay negativos';
+  }
+  else if(num3 === 0){
+    return 'Hay negativos';
+  }
+  
+  if(num1 > num2 && num1 > num2 && num1 > 0){
+    res1 = 'Número 1 es mayor y positivo';
+    return res1;
+  }
+  
+
 }
 
 function esPrimo(numero) {
