@@ -79,7 +79,6 @@ function saludo(idioma) {
       break;
   }
   return saludo;
-
 }
 
 function colors(color) {
@@ -254,7 +253,6 @@ function tieneTresDigitos(numero){
     return true;
   }
   return false;
-  
 }
 
 function doWhile(numero) {
@@ -267,7 +265,6 @@ function doWhile(numero) {
     numero = numero + 5;
   } while (i < 8)
   return numero;
-
 }
 
 
