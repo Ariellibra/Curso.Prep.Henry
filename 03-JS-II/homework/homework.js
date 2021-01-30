@@ -208,12 +208,29 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-
-  //for(var i = numero ; i >= 0; i){
-
   
-  
+  var num = numero;
+  var res = 0;
+  var div = 0;
+  var primo = 0;
 
+  if(numero === 0 || numero === 1){
+    return false;
+  }
+
+  for(var i = 0 ; i < num; i++){
+    div = i;
+    res = num % div;
+    
+    if(res === 0){
+      primo = primo + 1;
+    }
+  }
+
+  if(primo === 2){
+    return true;
+  }
+  return false;
 }
 
 function esVerdadero(valor){
@@ -238,6 +255,13 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  var res;
+  
+  res = numero.toString().split('').lenght;
+  if(res === 3){
+    return true;
+  }
+  return false;
   
 }
 
@@ -245,6 +269,7 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
 }
 
 
@@ -267,4 +292,5 @@ module.exports = {
   tablaDelSeis,
   tieneTresDigitos,
   doWhile
-};
+}
+
