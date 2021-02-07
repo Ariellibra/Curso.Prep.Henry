@@ -6,17 +6,15 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-
   const gato = {
     nombre: nombre,
     edad: edad,
     meow: function meow(){
       return 'Meow!';
-    }  
+    }
   }
   return gato;
 }
-
 
 function agregarPropiedad(objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
@@ -40,7 +38,6 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
   return objetoMisterioso.numeroMisterioso * 5;
-
 }
 
 function eliminarPropiedad(objeto, propiedad) {
@@ -73,13 +70,11 @@ function tieneEmail(usuario) {
   return false;
 }
 
-
 function tienePropiedad(objeto, propiedad) {
   // Devuelve "true" si el objeto tiene el valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-
   if (objeto[propiedad] === true) {
     return true;
   }
@@ -91,7 +86,6 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-
   if (usuario['password'] === password) {
     return true;
   }
@@ -113,7 +107,6 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // // Tu código:
   usuario.amigos.push(nuevoAmigo);
   return usuario;
-
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -122,9 +115,8 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-
-  for (var i = 0; i < usuarios.usuario.length; i++) {
-    
+  for (var i = 0; i < usuarios.length; i++) {
+    usuarios[i]['esPremium'] = true;
   }
   return usuarios;
 }
@@ -136,7 +128,13 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  var cont = 0;
+  for (var i = 0; i < usuario.posts.length; i++) {
+    cont += usuario.posts[i].likes;
+  }
+  return cont;
 }
+
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
@@ -148,7 +146,13 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  function calcularPrecioDescuento () {
+    var descuento;
+    descuento = (this.precio - (this.precio * this.porcentajeDeDescuento))
+    return descuento;
+  }
+  producto.calcularPrecioDescuento = calcularPrecioDescuento;
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
