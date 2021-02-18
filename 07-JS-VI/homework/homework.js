@@ -59,11 +59,8 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var array2 = [];
-  array.forEach(function (elemento, i) {
-    if (elemento.charAt(0) === 'a'){
-      array2.push(elemento);
-    }
-  })
+
+  array2 = array.filter(x => x[0]==='a');
 
   return array2;
 }
